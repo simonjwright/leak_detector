@@ -1,5 +1,5 @@
 name = "leak_detector"
-description = "Reports memory leaks"
+description = "Reports memory leaks, particularly for macOS"
 long-description = """
 Uses the memory allocation/deallocation log maintained by building for
 debug and linking against libgmem to report unfreed allocations.
@@ -8,7 +8,7 @@ to trace back to the source line where the allocation was made.
 """
 licenses = "Apache-2.0"
 tags = ["leak", "memory"]
-
+website = "https://github.com/simonjwright/leak_detector"
 version = "0.1.0-dev"
 
 authors = ["Simon Wright <simon@pushface.org>"]
