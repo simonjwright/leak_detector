@@ -267,11 +267,11 @@ begin
       for R of Roots loop
          if Verbose then
             Put_Line (Standard_Error, R.Total_Allocated'Image
-                        & " allocated from"
-                        & R.Location'Image
+                        & " allocated from "
+                        & Image (R.Location)
                         & " in"
                         & R.Allocations'Image
-                        & " calls");
+                        & " call(s)");
          end if;
 
          --  The actual leaking address
