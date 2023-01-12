@@ -1,0 +1,22 @@
+name = "leak_detector"
+description = "Reports memory leaks"
+long-description = """
+Uses the memory allocation/deallocation log maintained by building for
+debug and linking against libgmem to report unfreed allocations.
+The report can be processed by atos (macOS) or addr2line (others)
+to trace back to the source line where the allocation was made.
+"""
+licenses = "Apache-2.0"
+tags = ["leak", "memory"]
+
+version = "0.1.0-dev"
+
+authors = ["Simon Wright <simon@pushface.org>"]
+maintainers = ["Simon Wright <simon@pushface.org>"]
+maintainers-logins = ["simonjwright"]
+
+executables = ["leak_detector"]
+
+[[actions]]
+type = "post-build"
+command = ["bin/leak_detector", "-v", "share/leak_detector/gmem.out"]
